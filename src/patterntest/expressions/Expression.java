@@ -2,7 +2,7 @@ package patterntest.expressions;
 
 import patterntest.visitors.Visitor;
 
-public abstract class Expression {
+public interface Expression {
 
-  public abstract void accept(Visitor v);
+  public void accept(Visitor v);
 }

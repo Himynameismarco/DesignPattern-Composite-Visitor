@@ -2,7 +2,7 @@ package patterntest.expressions;
 
 import patterntest.visitors.Visitor;
 
-public class Literal extends Expression {
+public class Literal implements Expression {
 
   private float arg;
 
