@@ -1,12 +1,12 @@
 package patterntest.visitors;
 
-import patterntest.BinaryExpression;
-import patterntest.Expression;
-import patterntest.Addition;
-import patterntest.Division;
-import patterntest.Multiplication;
-import patterntest.Subtraction;
-import patterntest.Literal;
+import patterntest.expressions.binaryexpressions.BinaryExpression;
+import patterntest.expressions.Expression;
+import patterntest.expressions.binaryexpressions.Addition;
+import patterntest.expressions.binaryexpressions.Division;
+import patterntest.expressions.binaryexpressions.Multiplication;
+import patterntest.expressions.binaryexpressions.Subtraction;
+import patterntest.expressions.Literal;
 
 /**
  * This Printer as a visitor has to implement all printing methods individually for each
@@ -14,22 +14,6 @@ import patterntest.Literal;
  * the visitor.
  */
 public class TermPrinter implements Visitor {
-
-
-  @Override
-  public void visitBinaryExpression(BinaryExpression cbe) {
-    System.out.println("Hey!");
-    for (Expression t : cbe.getExpressions()) {
-      System.out.print(t);
-      System.out.print(" , ");
-    }
-  }
-
-  @Override
-  public void visitExpression(Expression l) {
-    System.out.print(l);
-  }
-
 
   @Override
   public void visitLeafAddition(Addition l) {

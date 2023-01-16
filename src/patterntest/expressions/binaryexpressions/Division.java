@@ -1,8 +1,9 @@
-package patterntest;
+package patterntest.expressions.binaryexpressions;
 
+import patterntest.expressions.Expression;
 import patterntest.visitors.Visitor;
 
-public class Division extends Expression {
+public class Division extends BinaryExpression {
 
   private float firstArg;
   private float secondArg;
@@ -20,5 +21,18 @@ public class Division extends Expression {
   @Override
   public String toString() {
     return firstArg + " : " + secondArg;
+  }
+
+  @Override
+  public Division getOperation() {
+    return this;
+  }
+
+  public float getFirstArg() {
+    return firstArg;
+  }
+
+  public float getSecondArg() {
+    return secondArg;
   }
 }

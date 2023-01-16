@@ -1,18 +1,14 @@
 package patterntest.visitors;
 
-import patterntest.BinaryExpression;
-import patterntest.Expression;
-import patterntest.Addition;
-import patterntest.Division;
-import patterntest.Multiplication;
-import patterntest.Subtraction;
-import patterntest.Literal;
+import patterntest.expressions.binaryexpressions.BinaryExpression;
+import patterntest.expressions.Expression;
+import patterntest.expressions.binaryexpressions.Addition;
+import patterntest.expressions.binaryexpressions.Division;
+import patterntest.expressions.binaryexpressions.Multiplication;
+import patterntest.expressions.binaryexpressions.Subtraction;
+import patterntest.expressions.Literal;
 
 public interface Visitor {
-
-  public void visitExpression(Expression e);
-
-  public void visitBinaryExpression(BinaryExpression cbe);
 
   public void visitLeafAddition(Addition l);
 

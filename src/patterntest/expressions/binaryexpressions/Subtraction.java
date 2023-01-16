@@ -1,8 +1,9 @@
-package patterntest;
+package patterntest.expressions.binaryexpressions;
 
+import patterntest.expressions.Expression;
 import patterntest.visitors.Visitor;
 
-public class Subtraction extends Expression {
+public class Subtraction extends BinaryExpression {
 
   private float firstArg;
   private float secondArg;
@@ -20,5 +21,18 @@ public class Subtraction extends Expression {
   @Override
   public String toString() {
     return firstArg + " - " + secondArg;
+  }
+
+  @Override
+  public Subtraction getOperation() {
+    return this;
+  }
+
+  public float getFirstArg() {
+    return firstArg;
+  }
+
+  public float getSecondArg() {
+    return secondArg;
   }
 }

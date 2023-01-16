@@ -1,4 +1,4 @@
-package patterntest;
+package patterntest.expressions;
 
 import patterntest.visitors.Visitor;
 
