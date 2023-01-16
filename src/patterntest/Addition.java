@@ -1,17 +1,22 @@
-public class LeafAddition implements BaseComponentTerm {
+package patterntest;
+
+import patterntest.visitors.Visitor;
+
+
+public class Addition extends Expression {
 
   private float firstArg;
   private float secondArg;
 
-  public LeafAddition(float firstArg, float secondArg) {
+  public Addition(float firstArg, float secondArg) {
     this.firstArg = firstArg;
     this.secondArg = secondArg;
   }
 
 
   @Override
-  public float compute() {
-    return firstArg + secondArg;
+  public void accept(Visitor v) {
+    v.visitLeafAddition(this);
   }
 
   @Override
